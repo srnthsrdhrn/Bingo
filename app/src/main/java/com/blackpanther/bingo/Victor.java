@@ -47,34 +47,14 @@ public class Victor extends AppCompatActivity {
         t[4][4] = (EditText) findViewById(R.id.editText25);
         for(int i=0;i<5;i++)
             for(int j=0;j<5;j++)
-                t[i][j].setText(String.valueOf(InputPage.pc[i][j]));
+                t[i][j].setText(String.valueOf(Boards.pc[i][j]));
     }
     public void reset(View v){
         for(int i=0;i<5;i++)
             for(int j=0;j<5;j++)
-        InputPage.user[i][j]=0;
-        startActivity(new Intent(Victor.this,InputPage.class));
+        Boards.user[i][j]=0;
+        startActivity(new Intent(Victor.this,InputFragmentManager.class));
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_victor, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

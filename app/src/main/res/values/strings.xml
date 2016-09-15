@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Bingo</string>
-    <string name="title_activity_intro_page">IntroPage</string>
+    <string name="title_activity_intro_page">Intro Page</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_input_page">InputPage</string>
+    <string name="title_activity_input_page">Input Page</string>
     <string name="title_activity_gameplay">Gameplay</string>
     <string name="title_activity_victor">Victor</string>
+    <string name="title_activity_input_fragment_manager">Input Fragment Manager</string>
 </resources>

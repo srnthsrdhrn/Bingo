@@ -25,7 +25,7 @@ public class Bingo extends AppCompatActivity {
 
     public void proceed(View v){
        Button proceed=(Button)findViewById(R.id.proceed);
-                  startActivity(new Intent(Bingo.this,InputPage.class));
+                  startActivity(new Intent(Bingo.this,ManualInputPage.class));
             }
 
     @Override

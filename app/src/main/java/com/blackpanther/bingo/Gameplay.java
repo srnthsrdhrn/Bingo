@@ -53,7 +53,7 @@ public class Gameplay extends AppCompatActivity {
 
         for(int i=0;i<5;i++)
             for(int j=0;j<5;j++) {
-                b[i][j].setText(String.valueOf(InputPage.user[i][j]));
+                b[i][j].setText(String.valueOf(Boards.user[i][j]));
             }
         return true;
     }
@@ -64,8 +64,8 @@ public class Gameplay extends AppCompatActivity {
             for (int j = 0; j < 5; j++) {
                 int i1 = v.getId();
                 if (i1 == b[i][j].getId()) {
-                    temp = InputPage.user[i][j];
-                    InputPage.user[i][j] = 0;
+                    temp = Boards.user[i][j];
+                    Boards.user[i][j] = 0;
                     b[i][j].setText("");
                     flag=true;
                     break;
@@ -77,8 +77,8 @@ public class Gameplay extends AppCompatActivity {
         flag=false;
         for(int i=0;i<5;i++) {
             for (int j = 0; j < 5; j++) {
-                if (InputPage.pc[i][j] == temp) {
-                    InputPage.pc[i][j] = 0;
+                if (Boards.pc[i][j] == temp) {
+                    Boards.pc[i][j] = 0;
                     flag = true;
                     break;
                 }
@@ -91,9 +91,9 @@ public class Gameplay extends AppCompatActivity {
         temp=0;
         for(int i=0;i<5;i++) {
             for (int j = 0; j < 5; j++)
-                if (InputPage.pc[i][j] != 0) {
-                    temp = InputPage.pc[i][j];
-                    InputPage.pc[i][j] = 0;
+                if (Boards.pc[i][j] != 0) {
+                    temp = Boards.pc[i][j];
+                    Boards.pc[i][j] = 0;
                     flag=true;
                     break;
                 }
@@ -103,8 +103,8 @@ public class Gameplay extends AppCompatActivity {
         flag=false;
         for(int i=0;i<5;i++) {
             for (int j = 0; j < 5; j++)
-                if (InputPage.user[i][j] == temp) {
-                    InputPage.user[i][j] = 0;
+                if (Boards.user[i][j] == temp) {
+                    Boards.user[i][j] = 0;
                     b[i][j].setText(" ");
                     flag=true;
                     break;
@@ -119,7 +119,7 @@ public class Gameplay extends AppCompatActivity {
             count1=0;
             for(int j=0;j<5;j++)
             {
-                if(InputPage.user[i][j]==0)
+                if(Boards.user[i][j]==0)
                     count1++;
             }
             if(count1==5)
@@ -132,7 +132,7 @@ public class Gameplay extends AppCompatActivity {
             count3=0;
             for(int j=0;j<5;j++)
             {
-                if(InputPage.user[j][i]==0)
+                if(Boards.user[j][i]==0)
                     count3++;
             }
             if(count3==5)
@@ -147,7 +147,7 @@ public class Gameplay extends AppCompatActivity {
             count01=0;
             for(int j=0;j<5;j++)
             {
-                if(InputPage.pc[i][j]==0)
+                if(Boards.pc[i][j]==0)
                     count01++;
             }
             if(count01==5)
@@ -160,7 +160,7 @@ public class Gameplay extends AppCompatActivity {
             count03=0;
             for(int j=0;j<5;j++)
             {
-                if(InputPage.pc[j][i]==0)
+                if(Boards.pc[j][i]==0)
                     count03++;
             }
             if(count03==5)
